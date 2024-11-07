@@ -1,0 +1,38 @@
+.cat {
+  background: var(--accent-color);
+  border-radius: 30px;
+  padding-bottom: 30px;
+}
+.cat-heading {
+  color: var(--primary-color);
+  padding: 10px 20px 0 20px;
+}
+.cat-photo {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px 30px 0 0;
+}
+.cat-location {
+  padding: 1px 20px 5px 20px;
+}
+.cat-location::before {
+  content: url("/assets/location-pin.svg") / "";
+}
+
+.cat-breed {
+  padding: 1px 20px 1px 20px;
+}
+.cat-age {
+  padding: 1px 20px 1px 20px;
+}
+
+section.cat a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+section.cat a::after {
+  content: "\203A";
+  margin-left: 5px;
+}

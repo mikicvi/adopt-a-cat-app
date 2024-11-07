@@ -1,0 +1,22 @@
+<section>
+  <form (submit)="filterCatsList(filter.value); $event.preventDefault()">
+    <input
+      type="text"
+      placeholder="Filter by catto colour or location!"
+      #filter
+    />
+    <button
+      class="primary"
+      type="button"
+      (click)="filterCatsList(filter.value)"
+    >
+      Search
+    </button>
+  </form>
+</section>
+<section class="results">
+  <app-cats-location
+    *ngFor="let catsSpecs of filteredCatsList"
+    [catSpec]="catsSpecs"
+  ></app-cats-location>
+</section>

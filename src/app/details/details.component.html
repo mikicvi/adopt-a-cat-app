@@ -1,0 +1,33 @@
+<article>
+  <img
+    class="cat-photo"
+    [src]="catSpec?.photoUrl"
+    alt="Cute photo of {{ catSpec?.name }}"
+  />
+  <section class="cat-description">
+    <h2 class="cat-heading">{{ catSpec?.name }}</h2>
+    <p class="cat-location">{{ catSpec?.location }}</p>
+  </section>
+  <section class="cat-features">
+    <h2 class="seciton-heading">About this sweet lovely catto</h2>
+    <ul>
+      <li>Fluff age: {{ catSpec?.age }}</li>
+      <li>Fluff breed: {{ catSpec?.breed }}</li>
+      <li>Is this catto available: {{ catSpec?.isAvailable }}</li>
+      <li>Does this cat have a microchip: {{ catSpec?.hasMicrochip }}</li>
+      <li>Is this sweet fluff vaccianted: {{ catSpec?.isVaccinated }}</li>
+    </ul>
+  </section>
+  <section class="cat-apply">
+    <h2 class="section-heading">Apply now to adopt this sweetie</h2>
+    <form [formGroup]="applyForm" (submit)="submitApplication()">
+      <label for="first-name">First Name</label>
+      <input id="first-name" type="text" formControlName="firstName" />
+      <label for="last-name">Last Name</label>
+      <input id="last-name" type="text" formControlName="lastName" />
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" />
+      <button class="primary" type="submit">Apply</button>
+    </form>
+  </section>
+</article>

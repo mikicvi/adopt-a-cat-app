@@ -1,0 +1,12 @@
+<section class="cat">
+  <img
+    class="cat-photo"
+    [src]="catSpec.photoUrl"
+    alt="Cute photo of {{ catSpec.name }}"
+  />
+  <h2 class="cat-heading">Name: {{ catSpec.name }}</h2>
+  <p class="cat-breed">Breed: {{ catSpec.breed }}</p>
+  <p class="cat-age">Age: {{ catSpec.age }}</p>
+  <p class="cat-location">{{ catSpec.location }}</p>
+  <a [routerLink]="['details', catSpec.id]">Learn more about this catto!</a>
+</section>

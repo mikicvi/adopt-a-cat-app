@@ -1,0 +1,72 @@
+.cat-photo {
+  max-height: 800px;
+  width: 40%;
+  object-fit: cover;
+  border-radius: 30px;
+  float: right;
+}
+
+.cat-heading {
+  font-size: 48pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.cat-location::before {
+  content: url("/assets/location-pin.svg") / "";
+}
+
+.cat-location {
+  font-size: 24pt;
+  margin-bottom: 15px;
+}
+
+.cat-features > .section-heading {
+  color: var(--secondary-color);
+  font-size: 24pt;
+  margin-bottom: 15px;
+}
+
+.cat-features {
+  margin-bottom: 20px;
+}
+
+.cat-features li {
+  font-size: 14pt;
+}
+
+li {
+  list-style-type: none;
+}
+
+.cat-apply .section-heading {
+  font-size: 18pt;
+  margin-bottom: 15px;
+}
+
+label,
+input {
+  display: block;
+}
+label {
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12pt;
+}
+input {
+  font-size: 16pt;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 400px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid 0.3px;
+}
+@media (max-width: 1024px) {
+  .cat-photo {
+    width: 100%;
+    height: 600px;
+  }
+}
